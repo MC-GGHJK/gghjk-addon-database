@@ -1,0 +1,16 @@
+name = "gghjk-addon-database"
+type = "javascript"
+
+account_id = "your-cloudflare-account-id"
+workers_dev = true
+
+[triggers]
+crons = []
+
+[build]
+command = "npm run build"
+
+[[r2_buckets]]
+binding = "R2_BUCKET"
+bucket_name = "addons"
+preview_bucket_name = "addons-preview"
